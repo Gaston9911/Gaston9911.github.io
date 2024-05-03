@@ -1,0 +1,172 @@
+:root{
+    --oscuro: #000;
+    --claro: #fff;
+    --primario:#ffbc0d;
+    --gris:#c2c2c2;
+}
+*{
+    margin: 0;
+}
+html{
+    font-size: 62%;
+}
+body{
+    font-family: Speedee, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;;
+}
+img{
+    max-width: 100%;
+}
+h1{
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 3.6rem;
+}
+h3{
+    font-size: 2rem;
+}
+p{
+    font-size: 1.4rem;
+}
+.contenedor{
+    width: 96%;
+    margin: auto;
+}
+.boton--amarillo{
+    margin: auto 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--oscuro);
+    background-color: var(--primario);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+/** HEADER **/
+header{
+    margin: 0 auto;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px rgb(236, 236, 236);
+}
+.header__logo{
+    width: 4rem;
+}
+
+@media (min-width: 1024px){
+    header{
+        padding: 1rem 4rem;
+    }
+    .header__logo{
+        width: 8rem;
+    }
+}
+
+
+/** MAIN **/
+.producto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 0;
+}
+@media (min-width: 1024px){
+    .producto{
+        max-width: 1024px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+        column-gap: 10rem;
+    }
+    .producto__titulo{
+        grid-column: 2 / 3;
+    }
+    .producto__imagen{
+        grid-column: 1 / 2;
+        grid-row: 1/4;
+    }
+    .producto__descripcion{
+        grid-column: 2 / 3;
+    }
+    .boton--amarillo-grande{
+        grid-column: 2 / 3;
+    }
+}
+.producto__imagen{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.producto__imagen img{
+    width: 100%;
+}
+@media (min-width: 640px){
+    .producto__imagen img {
+        width: auto;
+        margin-bottom: 2rem;
+    }
+}
+.producto__titulo--subtitulo{
+    font-size: 2rem;
+}
+.producto__descripcion{
+    text-align: justify;
+    letter-spacing: -.013rem;
+    line-height: 2.4rem;
+    margin-bottom: 4rem;
+}
+.producto__descripcion p{
+    margin-bottom: 1rem;
+}
+.boton--amarillo-grande{
+    margin: auto 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--oscuro);
+    background-color: var(--primario);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+/** MENU DE PRODUCTOS **/
+.menu-productos{
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 0;
+}
+.menu-productos__producto{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 3rem 1.5rem;
+    background-color: var(--claro);
+}
+.fondo-gris{
+    background-color: var(--gris);
+    width: 100%;
+}
+.menu-productos__titulo{
+    text-align: center;
+    margin-bottom: 8rem;
+}
+@media (min-width: 640px){
+    .menu-productos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        max-width: 1024px;
+    }
+    .menu-productos__titulo{
+        grid-column: 1 / 4;
+    }
+}
+
+/**Footer**/
+footer{
+    height: 10rem;
+    text-align: center;
+    padding: 2rem;
+}
