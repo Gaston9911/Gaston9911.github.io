@@ -2,7 +2,7 @@
     --oscuro: #000;
     --claro: #fff;
     --primario:#ffbc0d;
-    --gris:#c2c2c2;
+    --gris:#f9f9f9;
 }
 *{
     margin: 0;
@@ -28,6 +28,10 @@ h3{
 }
 p{
     font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+    color: var(--oscuro);
 }
 .contenedor{
     width: 96%;
@@ -152,6 +156,13 @@ header{
     text-align: center;
     margin-bottom: 8rem;
 }
+.menu-productos__enlaces{
+    display: flex;
+    min-height: 300px;
+}
+.menu-productos__enlaces img{
+    margin-top: auto;
+}
 @media (min-width: 640px){
     .menu-productos{
         display: grid;
@@ -161,6 +172,11 @@ header{
     }
     .menu-productos__titulo{
         grid-column: 1 / 4;
+    }
+}
+@media (min-width: 1080px){
+    .menu-productos{
+        gap: 4rem;
     }
 }
 
